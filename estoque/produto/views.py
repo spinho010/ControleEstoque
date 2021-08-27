@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from .models import Produto
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.list import ListView
+from .forms import ProdutoForm
+from django.urls import reverse_lazy
 
 
 def produto_list(request):
@@ -19,3 +23,11 @@ def produto_detail(request, pk):
 def produto_add(request):
     template_name = 'produto_form.html'
     return render(request, template_name)
+
+
+class ProdutoCreate(CreateView):
+    model = Produto
+    template_name = 'produto_form.html'
+    form_class = ProdutoForm
+    success_url = ('/')
+    
