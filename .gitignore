@@ -14,3 +14,4 @@ db.sqlite3
 *.sqlite3
 db.sqlite3
 estoque/__pycache__/urls.cpython-39.pyc
+estoque/__pycache__/urls.cpython-39.pyc
