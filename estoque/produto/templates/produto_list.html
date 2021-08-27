@@ -8,6 +8,7 @@
     .ok{
         color: green;
     }
+
 </style>
 {% endblock css %}
 {% block content %}
@@ -37,7 +38,9 @@
                                 {% endif %}
                             </td>
                             <td>{{ object.ncm }}</td>
-                            <td>{{ object.produto }}</td>
+                            <td>
+                                <a href="{% url 'produto:produto_detail' object.pk %}">{{ object.produto }}</a>
+                            </td>
                             <td>R$ <span class="pull-ringth">{{ object.preco }}</span></td>
                             <td class="text-center">{{ object.estoque }}</td>
                             <td class="text-center">{{ object.estoque_minimo }}</td>
