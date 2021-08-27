@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'estoque.core',
     'estoque.produto',
     'estoque.estoques',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
