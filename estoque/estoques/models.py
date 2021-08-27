@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from estoque.core.models import TimeStampedModel
-from estoque.produto import produto
+from estoque.produto.models import Produto
 from django.db import models
 
 MOVIMENTO = (
@@ -23,7 +23,7 @@ class Estoque(TimeStampedModel):
 
 class EstoqueItens(models.Model):
     estoque = models.ForeignKey(Estoque, on_delete=models.CASCADE)
-    produto = models.ForeignKey(produto, on_delete=models.CASCADE)
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
     quantidade = models.PositiveIntegerField()
     saldo = models.PositiveIntegerField()
 

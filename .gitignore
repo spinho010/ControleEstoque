@@ -7,3 +7,5 @@ __pycache__/
 local_settings.py
 .vscode
 *.sqlite3
+*.pyc
+*.pyc
