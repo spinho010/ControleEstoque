@@ -30,4 +30,11 @@ class ProdutoCreate(CreateView):
     template_name = 'produto_form.html'
     form_class = ProdutoForm
     success_url = ('/')
+
+
+class ProdutoUpdate(UpdateView):
+    model = Produto
+    template_name = 'produto_form.html'
+    form_class = ProdutoForm
+    success_url = ('/')
     
